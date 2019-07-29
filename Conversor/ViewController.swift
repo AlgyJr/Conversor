@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var decimalNr: UITextField!
-    @IBOutlet weak var binarioNr: UITextField!
-    @IBOutlet weak var notific: UILabel!
-    @IBAction func actionConvert(_ sender: Any) {
-        if let dec = Int(decimalNr.text!) {
+    @IBOutlet weak var recept: UITextField!
+    @IBOutlet weak var result: UITextField!
+    @IBAction func actionBin(_ sender: Any) {
+        
+    }
+    
+    @IBAction func bottomDec(_ sender: Any) {
+        if let dec = Int(recept.text!) {
             if dec > 0 {
                 var binario = ""
                 var div = dec
@@ -33,9 +36,7 @@ class ViewController: UIViewController {
                     binario.append(binar[c])
                     c-=1
                 }
-                binarioNr.text = binario
-                notific.textColor = UIColor.red
-                notific.text = "NB: Lembre que números binarios lê-se da esquerda á direita"
+                result.text = binario
             } else {
                 print("Erro! Número decimal deve ser positivo")
             }
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
             print("Introduza o número decimal")
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
