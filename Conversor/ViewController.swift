@@ -13,7 +13,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var recept: UITextField!
     @IBOutlet weak var result: UITextField!
     @IBAction func actionBin(_ sender: Any) {
-        
+        let b = recept.text!
+        let letras : [Character] = Array(b)
+        if procurarAlfabeto(letras: letras) {
+            var decimal : Double = 0
+            var elevado : Int = b.count - 1
+            
+            for letra in letras {
+                if letra == "1" {
+                    decimal = decimal + pow(Double(2),Double(elevado))
+                }
+                elevado -= 1
+            }
+            result.text = "\(decimal)"
+        } else {
+            //Erro! Introduza número binário de 2/4/8/16 bits!\nTente novamente
+            
+        }
+    }
+    
+    func procurarAlfabeto(letras: [Character]) -> Bool {
+        for letra in letras {
+            print(letra)
+            if letra != "0" && letra != "1" {
+                return false
+            }
+        }
+        return true
     }
     
     @IBAction func bottomDec(_ sender: Any) {
@@ -37,11 +63,17 @@ class ViewController: UIViewController {
                     c-=1
                 }
                 result.text = binario
+            } else if dec == 0 {
+                result.text = "0"
             } else {
-                print("Erro! Número decimal deve ser positivo")
+                //Erro! Número decimal deve ser positivo
+                //Tem que resolver ainda
+                recept.layer.borderColor = UIColor.red.cgColor
             }
         } else {
-            print("Introduza o número decimal")
+            //Erro de campo vazio
+            //Tem que se resolver ainda
+            recept.layer.borderColor = UIColor.red.cgColor
         }
     }
     

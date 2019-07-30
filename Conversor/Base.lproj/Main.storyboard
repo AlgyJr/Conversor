@@ -18,27 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-nx-2bI">
-                                <rect key="frame" x="95" y="338" width="56" height="36"/>
-                                <state key="normal" title="binario"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-nx-2bI">
+                                <rect key="frame" x="99" y="368" width="56" height="30"/>
+                                <state key="normal" title="Binario"/>
                                 <connections>
                                     <action selector="actionBin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYB-UL-Rds"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-zx-eMC">
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-zx-eMC">
                                 <rect key="frame" x="93" y="238" width="229" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="introduza número" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E15-Jb-3WW">
                                 <rect key="frame" x="93" y="133" width="229" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9g-Mu-WYH">
-                                <rect key="frame" x="264" y="349" width="56" height="30"/>
+                                <rect key="frame" x="259" y="368" width="56" height="30"/>
                                 <state key="normal" title="Decimal"/>
                                 <connections>
                                     <action selector="bottomDec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oua-zv-Svl"/>
@@ -47,20 +47,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="85" id="05z-Q9-U8a"/>
-                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="centerY" secondItem="who-nx-2bI" secondAttribute="centerY" id="301-xj-gVM"/>
                             <constraint firstItem="o9g-Mu-WYH" firstAttribute="height" secondItem="who-nx-2bI" secondAttribute="height" id="FBA-mG-qfC"/>
-                            <constraint firstItem="who-nx-2bI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-84" id="Q0h-Ai-b4x"/>
+                            <constraint firstItem="who-nx-2bI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-65" id="La1-1c-P52"/>
                             <constraint firstItem="xaf-zx-eMC" firstAttribute="height" secondItem="E15-Jb-3WW" secondAttribute="height" id="QKZ-qH-xwe"/>
                             <constraint firstItem="xaf-zx-eMC" firstAttribute="top" secondItem="E15-Jb-3WW" secondAttribute="bottom" constant="75" id="aVg-YV-1Mw"/>
+                            <constraint firstItem="who-nx-2bI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="cGf-OO-rnw"/>
                             <constraint firstItem="xaf-zx-eMC" firstAttribute="width" secondItem="E15-Jb-3WW" secondAttribute="width" id="cvZ-ef-tY7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E15-Jb-3WW" secondAttribute="trailing" constant="92" id="dWE-gg-k6n"/>
+                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="centerY" secondItem="who-nx-2bI" secondAttribute="centerY" id="eCl-Q9-nsT"/>
                             <constraint firstItem="E15-Jb-3WW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="fMj-S3-Etl"/>
-                            <constraint firstItem="who-nx-2bI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0o-3f-Tar"/>
                             <constraint firstItem="xaf-zx-eMC" firstAttribute="centerX" secondItem="E15-Jb-3WW" secondAttribute="centerX" id="g3x-la-yOq"/>
                             <constraint firstItem="xaf-zx-eMC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iN5-4S-raJ"/>
                             <constraint firstItem="o9g-Mu-WYH" firstAttribute="width" secondItem="who-nx-2bI" secondAttribute="width" id="nuF-oX-Ofw"/>
                             <constraint firstItem="E15-Jb-3WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="wOp-gz-fcs"/>
+                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="zWG-qi-vkf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
