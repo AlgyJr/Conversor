@@ -12,10 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var recept: UITextField!
     @IBOutlet weak var result: UITextField!
+    @IBOutlet weak var toDecimal: CustomUIButton!
+    @IBOutlet weak var toBinario: CustomUIButton!
     @IBAction func actionBin(_ sender: Any) {
         let b = recept.text!
         let letras : [Character] = Array(b)
         if procurarAlfabeto(letras: letras) {
+            recept.backgroundColor = UIColor.white
             var decimal : Double = 0
             var elevado : Int = b.count - 1
             
@@ -25,16 +28,16 @@ class ViewController: UIViewController {
                 }
                 elevado -= 1
             }
-            result.text = "\(decimal)"
+            result.text = "\(Int(decimal))"
         } else {
             //Erro! Introduza número binário de 2/4/8/16 bits!\nTente novamente
-            
+            recept.backgroundColor = UIColor.red
+            toDecimal.shake()
         }
     }
     
     func procurarAlfabeto(letras: [Character]) -> Bool {
         for letra in letras {
-            print(letra)
             if letra != "0" && letra != "1" {
                 return false
             }
@@ -45,6 +48,7 @@ class ViewController: UIViewController {
     @IBAction func bottomDec(_ sender: Any) {
         if let dec = Int(recept.text!) {
             if dec > 0 {
+                recept.backgroundColor = UIColor.white
                 var binario = ""
                 var div = dec
                 while div != 0 {
@@ -68,7 +72,9 @@ class ViewController: UIViewController {
             } else {
                 //Erro! Número decimal deve ser positivo
                 //Tem que resolver ainda
-                recept.layer.borderColor = UIColor.red.cgColor
+                recept.backgroundColor = UIColor.red
+                toBinario.shake()
+//                recept.layer.borderColor = UIColor.red.cgColor
             }
         } else {
             //Erro de campo vazio

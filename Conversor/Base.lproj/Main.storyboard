@@ -18,28 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-nx-2bI">
-                                <rect key="frame" x="99" y="368" width="56" height="30"/>
-                                <state key="normal" title="Binario"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-nx-2bI" customClass="CustomUIButton" customModule="Conversor" customModuleProvider="target">
+                                <rect key="frame" x="70" y="374" width="87" height="30"/>
+                                <state key="normal" title="To Decimal"/>
                                 <connections>
                                     <action selector="actionBin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYB-UL-Rds"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-zx-eMC">
-                                <rect key="frame" x="93" y="238" width="229" height="30"/>
+                                <rect key="frame" x="45" y="243" width="324" height="41"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="introduza número" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E15-Jb-3WW">
-                                <rect key="frame" x="93" y="133" width="229" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduza o número" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E15-Jb-3WW">
+                                <rect key="frame" x="45" y="133" width="324" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="zUR-3H-fNw"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9g-Mu-WYH">
-                                <rect key="frame" x="259" y="368" width="56" height="30"/>
-                                <state key="normal" title="Decimal"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9g-Mu-WYH" customClass="CustomUIButton" customModule="Conversor" customModuleProvider="target">
+                                <rect key="frame" x="252" y="368" width="87.5" height="31"/>
+                                <state key="normal" title="To Binario"/>
                                 <connections>
                                     <action selector="bottomDec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oua-zv-Svl"/>
                                 </connections>
@@ -47,26 +50,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="height" secondItem="who-nx-2bI" secondAttribute="height" id="FBA-mG-qfC"/>
-                            <constraint firstItem="who-nx-2bI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-65" id="La1-1c-P52"/>
-                            <constraint firstItem="xaf-zx-eMC" firstAttribute="height" secondItem="E15-Jb-3WW" secondAttribute="height" id="QKZ-qH-xwe"/>
-                            <constraint firstItem="xaf-zx-eMC" firstAttribute="top" secondItem="E15-Jb-3WW" secondAttribute="bottom" constant="75" id="aVg-YV-1Mw"/>
-                            <constraint firstItem="who-nx-2bI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="cGf-OO-rnw"/>
-                            <constraint firstItem="xaf-zx-eMC" firstAttribute="width" secondItem="E15-Jb-3WW" secondAttribute="width" id="cvZ-ef-tY7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E15-Jb-3WW" secondAttribute="trailing" constant="92" id="dWE-gg-k6n"/>
-                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="centerY" secondItem="who-nx-2bI" secondAttribute="centerY" id="eCl-Q9-nsT"/>
-                            <constraint firstItem="E15-Jb-3WW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="fMj-S3-Etl"/>
-                            <constraint firstItem="xaf-zx-eMC" firstAttribute="centerX" secondItem="E15-Jb-3WW" secondAttribute="centerX" id="g3x-la-yOq"/>
-                            <constraint firstItem="xaf-zx-eMC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iN5-4S-raJ"/>
-                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="width" secondItem="who-nx-2bI" secondAttribute="width" id="nuF-oX-Ofw"/>
-                            <constraint firstItem="E15-Jb-3WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="93" id="wOp-gz-fcs"/>
-                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="zWG-qi-vkf"/>
+                            <constraint firstItem="E15-Jb-3WW" firstAttribute="trailing" secondItem="xaf-zx-eMC" secondAttribute="trailing" id="0e4-nX-RWd"/>
+                            <constraint firstItem="xaf-zx-eMC" firstAttribute="top" secondItem="E15-Jb-3WW" secondAttribute="bottom" constant="75" id="2XD-UG-Q97"/>
+                            <constraint firstItem="E15-Jb-3WW" firstAttribute="leading" secondItem="xaf-zx-eMC" secondAttribute="leading" id="4iP-r0-Bmg"/>
+                            <constraint firstItem="E15-Jb-3WW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="DpO-Wu-Dps"/>
+                            <constraint firstItem="who-nx-2bI" firstAttribute="top" secondItem="o9g-Mu-WYH" secondAttribute="top" id="XR3-dT-dZa"/>
+                            <constraint firstItem="who-nx-2bI" firstAttribute="top" secondItem="xaf-zx-eMC" secondAttribute="bottom" constant="90" id="Y84-x5-ATa"/>
+                            <constraint firstItem="E15-Jb-3WW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aT6-e3-8Cq"/>
+                            <constraint firstItem="who-nx-2bI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="dTh-B5-svG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="who-nx-2bI" secondAttribute="bottom" constant="458" id="eXP-Jt-FqJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o9g-Mu-WYH" secondAttribute="bottom" constant="458" id="hRz-WA-o9F"/>
+                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="leading" secondItem="who-nx-2bI" secondAttribute="trailing" constant="95" id="jVP-On-v3w"/>
+                            <constraint firstItem="o9g-Mu-WYH" firstAttribute="width" secondItem="who-nx-2bI" secondAttribute="width" constant="1" id="lMw-JC-ypb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o9g-Mu-WYH" secondAttribute="trailing" constant="74.5" id="n03-RP-xRD"/>
+                            <constraint firstItem="E15-Jb-3WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="wXt-Zs-WI3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="recept" destination="E15-Jb-3WW" id="ULI-vQ-A6B"/>
                         <outlet property="result" destination="xaf-zx-eMC" id="t2O-So-uEu"/>
+                        <outlet property="toBinario" destination="o9g-Mu-WYH" id="aIE-QU-8PT"/>
+                        <outlet property="toDecimal" destination="who-nx-2bI" id="HVJ-hN-kOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
